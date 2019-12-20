@@ -1,12 +1,15 @@
 class Rgb():
 
     def __init__(self, r, g, b):
-        self.red = r
-        self.green = g
-        self.blue = b
-        self.h_red = None
-        self.h_green = None
-        self.h_blue = None
+        if type(r) and type(g) and type(b) == int:
+            self.red = r
+            self.green = g
+            self.blue = b
+            self.h_red = None
+            self.h_green = None
+            self.h_blue = None
+        else:
+            raise TypeError('Agrguments should be int')
     
     def convert(self):
        self.h_red = hex(self.red)
